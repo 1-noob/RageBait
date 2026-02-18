@@ -18,9 +18,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.hapticfeedback.HapticFeedback
+import androidx.compose.ui.platform.LocalHapticFeedback
 import android.media.MediaPlayer
 import androidx.compose.material3.Surface
+import androidx.compose.ui.hapticfeedback.HapticFeedbackType
 import com.mecharium.ragebait.ui.theme.RageBaitTheme
 
 
@@ -39,28 +41,31 @@ class MainActivity : ComponentActivity() {
         }
     }
 
-}
-
-@Composable
-fun PlayFahhh(modifier: Modifier = Modifier) {
-    val context = LocalContext.current
-    Box(
-        modifier = Modifier.fillMaxSize(),
-        contentAlignment = Alignment.Center
-    ) {
-        Button(
-            onClick = {
-                val mediaPlayer = MediaPlayer.create(context, R.raw.fahhhhh)
-                mediaPlayer.start()
-            },
-            modifier = Modifier.size(120.dp),
-            shape = CircleShape,
-            colors = ButtonDefaults.buttonColors(
-                containerColor = Color.Red,
-                contentColor = Color.White
-            )
+    @Composable
+    fun PlayFahhh(modifier: Modifier = Modifier) {
+        val context = LocalContext.current
+        val haptic = LocalHapticFeedback.current
+        Box(
+            modifier = Modifier.fillMaxSize(),
+            contentAlignment = Alignment.Center
         ) {
-            Text("FAAH")
+            Button(
+                onClick = {
+                    // Haptic feedback
+                    haptic.performHapticFeedback(HapticFeedbackType.LongPress)
+
+                    val mediaPlayer = MediaPlayer.create(context, R.raw.fahhhhh)
+                    mediaPlayer.start()
+                },
+                modifier = Modifier.size(120.dp),
+                shape = CircleShape,
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = Color.Red,
+                    contentColor = Color.White
+                )
+            ) {
+                Text("FAAH")
+            }
         }
     }
 }
