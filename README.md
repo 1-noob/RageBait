@@ -1,4 +1,4 @@
-# An app for ragebaiting people during conversations
+# An app for making funny sounds during conversations
 
 ## App Preview
 
