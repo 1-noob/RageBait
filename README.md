@@ -1,6 +1,15 @@
 An app for ragebaiting people during conversations
 
-# 📱 How to Download the APK
+# 📸 App Preview
+
+<p align="center">
+  <img src="/images/light.jpg" width="40%" height="400" />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="/images/dark.jpg" width="40%" height ="400"/>
+</p>
+
+
+# How to Download the APK
 
 Follow these steps to download and install the app APK file.
 
@@ -24,7 +33,7 @@ Or go directly to: [Release Page](https://github.com/1-noob/RageBait/releases/ta
 
 3. The download will start automatically.
 
-> ⚠️ Do NOT download:
+> Do not download:
 > - `Source code (zip)`
 > - `Source code (tar.gz)`
 >
@@ -41,6 +50,6 @@ Or go directly to: [Release Page](https://github.com/1-noob/RageBait/releases/ta
 
 ---
 
-## ✅ Done!
+## Done!
 
 You have successfully installed the app 🎉
